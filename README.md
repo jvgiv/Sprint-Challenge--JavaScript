@@ -29,23 +29,50 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+    .forEach gives you a way to execute a function for each item in an array.  .map does the same thing, but instead of just outputting like .forEach, it creates a new array and outputs that
+
 
 2. What is the difference between a function and a method?
+    a function is something that can be created and executed with inputs.  A method is also a function, but it is just the property of an object.   
+
 
 3. What is closure?
+    Closure seems to me to be the idea where functions have access to variables that are declared out of their scope.
+
+    ie 
+
+    function cat() {
+        var thisThing = "dog"
+        function television() {
+            console.log(thisThing);
+        }
+    }
+
 
 4. Describe the four rules of the 'this' keyword.
+ - Global Binding
+    - this contains the value of EVERYTHING if you were to just log console.log(this);
+    - it would output everything in JS
+ - Implicit Binding
+    - whenever a function is called using dot notation(when there is a function inside of an object)
+ - Explicit Binding 
+    - whenever the call or apply method is invoked
+ - New Binding
+    - when a constructor function is used and you are able to reference its objects using the this keyword
+    - ${this.name}
 
 5. Why do we need super() in an extended class?
+    Super is basically the equivalent to the call method in prototypes.  It enables children to have access to its parents contents
+
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 - [ ] You are now ready to build this project with your preferred IDE
 - [ ] Implement the project on your Branch, committing changes regularly.
